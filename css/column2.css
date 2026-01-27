@@ -1,0 +1,142 @@
+.column2 {
+    /*border: 2px solid rgb(112, 219, 112);*/
+    display: flex;
+    flex-direction: column;
+    padding-inline: 75px;
+    width: 55%;
+    flex: 1;
+    margin-left: 45%;
+}
+
+.about{
+    margin-bottom: 97px;
+    margin-top: 100px;
+    line-height: 1.7;
+    min-width: 500px;
+    width: 90%;
+    max-width: 650px;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 500px;
+    width: 90%;
+    max-width: 650px;
+
+}
+
+.card{
+    padding: 20px;
+    min-width: 500px;
+    width: 100%;
+    border-radius: 20px ;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.card h2{
+  font-weight: 500;
+}
+
+.card:hover h2{
+    color:#5eead4;
+    font-weight: bold;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 212, 191, 0.08);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: rgba(94, 234, 212, 0.9);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  z-index: 2;
+}
+
+.card > * {
+  position: relative;
+  z-index: 3;
+}
+
+.experience:hover .card {
+  opacity: 0.45;
+  transition: opacity 0.25s ease;
+}
+
+.experience:hover .card:hover {
+  opacity: 1;
+}
+
+.card:hover::after {
+  transform: scaleX(1);
+}
+
+
+.date{
+    width: 25%;
+    height: 100%;
+    /*border: 1px solid green;*/
+}
+.expDescript{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;  
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.attributes{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.item{
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: #0f766e;
+    color: #5eead4;
+}
+
+.CV{
+  display: inline-block;
+  padding: 10px 16px;
+  color: azure;
+  text-decoration: none;
+  font-size: 0.85rem;
+  z-index: 10;
+  font-size: medium;
+  font-weight: bold;
+  margin-bottom: 100PX;
+}
+
+.CV:hover {
+  background: rgba(94, 234, 212, 0.1);
+  color: #5eead4;
+  font-weight: bold;
+}
