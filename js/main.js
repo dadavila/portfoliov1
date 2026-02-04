@@ -9,10 +9,9 @@ function setActive(id) {
   });
 }
 
-/* 👉 ACTIVE inicial al cargar */
+
 setActive('about');
 
-/* 👉 Scroll manual */
 window.addEventListener('scroll', () => {
   if (isClickScrolling) return;
 
@@ -28,7 +27,8 @@ window.addEventListener('scroll', () => {
   setActive(current);
 });
 
-/* 👉 Click en menú */
+
+
 navItems.forEach(item => {
   item.addEventListener('click', () => {
     const targetId = item.dataset.target;
@@ -39,7 +39,7 @@ navItems.forEach(item => {
 
     target.scrollIntoView({
       behavior: 'smooth',
-      block: 'center'   // 🔥 centra EXACTO como al cargar
+      block: 'center'  
     });
 
     setTimeout(() => {
@@ -47,3 +47,50 @@ navItems.forEach(item => {
     }, 1000);
   });
 });
+
+
+
+let currentLang = "esp";
+
+const translations = {
+  esp: {
+    about: "SOBRE MÍ",
+    experience: "EXPERIENCIA",
+    projects: "PROYECTOS",
+  },
+  eng: {
+    about: "ABOUT",
+    experience: "EXPERIENCE",
+    projects: "PROJECTS",
+  }
+};
+
+function applyTranslations() {
+  const elements = document.querySelectorAll("[data-i18n]");
+
+  elements.forEach(el => {
+    const key = el.dataset.i18n;
+
+    if (translations[currentLang][key]) {
+      el.textContent = translations[currentLang][key];
+    }
+  });
+}
+
+function renderLangButton() {
+  const btn = document.getElementById("lang-btn");
+
+  btn.innerHTML =
+    currentLang === "esp"
+      ? "<strong>ESP</strong> | ENG"
+      : "ESP | <strong>ENG</strong>";
+}
+
+document.getElementById("lang-btn").addEventListener("click", () => {
+  currentLang = currentLang === "esp" ? "eng" : "esp";
+  applyTranslations();
+  renderLangButton();
+});
+
+applyTranslations();
+renderLangButton();

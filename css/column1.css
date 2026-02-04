@@ -79,6 +79,40 @@
 
 .socialMedia{
     display: flex;
-    gap: 15px;
+    gap: 25px;
     margin-top: auto;
+}
+.socialMedia a {
+  color: #9ca3af;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
+.socialMedia a:hover {
+  color: #5eead4;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.lang-switch .lang {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.lang-switch strong {
+  opacity: 1;
+  font-weight: 600;
+  color: #5eead4;
 }
