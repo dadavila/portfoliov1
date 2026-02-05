@@ -41,6 +41,10 @@
   font-weight: 500;
 }
 
+.card p{
+  color: rgb(185, 193, 199);
+}
+
 .card:hover h2{
     color:#5eead4;
     font-weight: bold;
