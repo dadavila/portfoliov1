@@ -24,3 +24,10 @@ body {
   inset: 0;
   z-index: 0;
 }
+
+
+@media (max-width: 1024px) {
+  .principal {
+    flex-direction: column;
+  }
+}

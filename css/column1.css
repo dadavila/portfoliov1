@@ -116,3 +116,15 @@
   font-weight: 600;
   color: #5eead4;
 }
+
+@media (max-width: 1024px) {
+
+  .column1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    padding-inline: 30px;
+  }
+}
