@@ -16,7 +16,9 @@
     width: 90%;
     max-width: 650px;
     color: rgb(185, 193, 199);
+    
 }
+
 
 .about strong{
   color: #e5e7eb;
@@ -154,7 +156,7 @@ h2 {
 
 @media (max-width: 1024px) {
   .column2 {
-    width: 100%;
+    width: 100vw;
     margin-left: 0%;
     padding-inline: 30px;
   }
@@ -162,18 +164,25 @@ h2 {
     margin-bottom: 20px;
     margin-top: 0px;
     width: 100%;
+    min-width: 0;
     max-width: 100%;
   }
   .experience{
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
   }
-
+  .card {
+    min-width: none;
+  }
 }
 
 @media ( max-width: 720px){
   .card{
     flex-direction: column;
     gap: 8px;
+    padding: 10px 0px;
+    border-radius: 0px;
+    min-width: 0;
+    padding-right: 30px;
   }
 }

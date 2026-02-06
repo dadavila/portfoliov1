@@ -142,6 +142,10 @@
     display: flex;
     justify-content: left;
     padding: 60px 30px;
+
+  }
+  .content{
+    width: 100%;
   }
 
   .menu{display: none;}

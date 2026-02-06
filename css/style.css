@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: clamp(14px, 1.6vw, 16px);
+}
 
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -27,7 +30,13 @@ body {
 
 
 @media (max-width: 1024px) {
+  html,body{
+    width: 100%;
+    overflow-x: hidden;
+  }
   .principal {
     flex-direction: column;
+    width: 100vw;
   }
+  
 }
